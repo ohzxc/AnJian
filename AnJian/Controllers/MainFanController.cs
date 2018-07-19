@@ -11,6 +11,7 @@ namespace AnJian.Controllers
     {
         public ActionResult Index()
         {
+            ViewBag.Title = "主风机在线监测";
             return View();
         }
         public ActionResult MotorDetail(string no)
