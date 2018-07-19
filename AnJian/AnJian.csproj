@@ -144,16 +144,19 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\MainFanController.cs" />
+    <Compile Include="Controllers\WaterPumpController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\MainFan\Fan.cs" />
     <Compile Include="Models\MainFan\Motor.cs" />
+    <Compile Include="Models\WaterPump\WatrerPumpParms.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\sb.png" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -191,6 +194,10 @@
     <Content Include="Views\MainFan\FanDetail.cshtml" />
     <Content Include="Views\MainFan\Index.cshtml" />
     <Content Include="Views\MainFan\MotorDetail.cshtml" />
+    <Content Include="Views\WaterPump\BranchWaterPumpRunTime.cshtml" />
+    <Content Include="Views\WaterPump\CenterWaterPumpRunTime.cshtml" />
+    <Content Include="Views\WaterPump\ControlCabinetRunTime.cshtml" />
+    <Content Include="Views\WaterPump\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

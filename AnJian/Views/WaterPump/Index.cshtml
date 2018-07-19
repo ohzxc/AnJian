@@ -1,0 +1,58 @@
+﻿
+<div id="root-container" style=" background:url(../../Content/sb.png) no-repeat ;position:relative;background-size:cover;width:1300px;height:665px;">
+    <div id="water1" style="position:absolute;top:8%;left:20%"></div>
+    <div id="water2" style="position:absolute;top:8%;left:36%;"></div>
+    <div id="water3" style="position:absolute;top:8%;left:60%;"></div>
+    <div id="contrl" style="position:absolute;top:1%;right:10%;"></div>
+    <div id="center" style="position:absolute;bottom:5%;right:15%;"></div>
+</div>
+@Scripts.Render("~/bundles/jquery")
+<script type="text/javascript">
+
+
+        $(function () {
+            //heightRender();
+            //$(window).resize(heightRender)
+            refrsh();
+            setInterval(refrsh,1000)
+        })
+
+
+        function heightRender() {
+            var windowHeight = $(window).height();
+            $("#root-container").height(windowHeight - 30);
+        }
+
+        function refrsh() {
+                //分支水泵
+            for (let i = 1; i <= 3; i++) {
+                $.ajax({
+                    url: '@Url.Action("BranchWaterPumpRunTime", "WaterPump")',  // 异步请求Action
+                     data: "parm="+i,
+                type: "POST",
+                success:  function (result) {
+                    $("#water"+i).html(result);
+                }
+            });
+            }
+            //中心水泵
+            $.ajax({
+                url: '@Url.Action("CenterWaterPumpRunTime", "WaterPump")',  // 异步请求Action
+                type: "POST",
+                success: function (result) {
+                    $("#center").html(result);
+                }
+            });
+            //控制柜
+            $.ajax({
+                url: '@Url.Action("ControlCabinetRunTime", "WaterPump")',  // 异步请求Action
+                data: "",
+                type: "POST",
+                success: function (result) {
+                    $("#contrl").html(result);
+                }
+            });
+        }
+
+        //setInterval( );
+</script>
