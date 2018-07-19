@@ -13,8 +13,6 @@ namespace AnJian.Controllers
         {
             return View();
         }
-        
-
         public ActionResult MotorDetail(string no)
         {
             var model = new Motor();
