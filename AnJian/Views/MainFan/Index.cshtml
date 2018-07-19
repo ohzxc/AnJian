@@ -28,6 +28,7 @@
             padding-right: 15px;
             padding-left: 15px;
             padding-bottom: 5px;
+            display: block;
         }
 
         .fan {
@@ -38,6 +39,11 @@
 
         .root-container {
             font-size: 12px;
+        }
+
+        label {
+            margin-bottom: 0px;
+            font-weight: normal;
         }
     </style>
     <div class="root-container" style="background:url(../../Content/MainFan.png) center no-repeat;background-size:100% ;position:relative ;">
@@ -52,7 +58,7 @@
         $(function () {
             heightRender();
             updateData();
-           // setInterval(updateData, 1000);
+           setInterval(updateData, 1000);
             $(window).resize(() => {
                 heightRender();
             })
