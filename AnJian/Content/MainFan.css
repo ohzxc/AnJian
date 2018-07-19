@@ -1,0 +1,45 @@
+﻿.fan-border {
+    border: thin solid #ababab;
+    display: inline-table;
+    margin-top: 5px;
+    background: rgb(245,248,253);
+}
+
+.son-border {
+    margin: 2px;
+    border: thin solid #dddddd;
+    background: white;
+}
+
+.value-border {
+    padding-top: 2px;
+    padding-right: 5px;
+    padding-left: 10px;
+    padding-bottom: 2px;
+    border: thin solid #ababab;
+    text-align: right;
+    color: #00bfff;
+}
+
+table {
+    padding-top: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+    padding-bottom: 5px;
+    display: block;
+}
+
+.fan {
+    width: 200px;
+    text-align: center;
+    position: absolute;
+}
+
+.root-container {
+    font-size: 12px;
+}
+
+label {
+    margin-bottom: 0px;
+    font-weight: normal;
+}
