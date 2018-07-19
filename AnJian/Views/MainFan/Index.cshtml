@@ -1,4 +1,7 @@
-﻿@Styles.Render("~/Content/MainFan.css")
+﻿@{
+    ViewBag.Title = "主风机在线监测";
+}
+@Styles.Render("~/Content/MainFan.css")
 @Scripts.Render("~/bundles/jquery")
 <div class="root-container" style="background:url(../../Content/MainFan.png) center no-repeat;background-size:100% ;position:relative ;">
     <div class="fan" id="motor1-1" style="left:20px;top:50px"></div>

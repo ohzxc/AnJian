@@ -12,7 +12,6 @@ namespace AnJian.Controllers
         // GET: WaterPump
         public ActionResult Index()
         {
-            ViewBag.Title = "主排水在线监测";
             return View();
         }
 
