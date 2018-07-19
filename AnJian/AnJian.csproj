@@ -148,7 +148,6 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\MainFan\Fan.cs" />
-    <Compile Include="Models\MainFan\MainFan.cs" />
     <Compile Include="Models\MainFan\Motor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

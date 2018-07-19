@@ -4,7 +4,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Web;
 
-namespace WebApplication2.Models.MainFan
+namespace AnJian.Models.MainFan
 {
     public class Motor
     {

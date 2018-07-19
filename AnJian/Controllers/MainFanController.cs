@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using WebApplication2.Models.MainFan;
+using AnJian.Models.MainFan;
 
-namespace WebApplication2.Controllers
+namespace AnJian.Controllers
 {
     public class MainFanController : Controller
     {
