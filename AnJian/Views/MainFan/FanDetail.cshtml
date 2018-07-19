@@ -1,0 +1,27 @@
+﻿@model WebApplication2.Models.MainFan.Fan
+
+<div >
+    <span>@Model.Name</span>
+    <div class="fan-border">
+        <div class="fan-border son-border">
+            <table class="fan-container">
+                <tr>
+                    <td>@Html.LabelFor(Model=>Model.GasConcentration)</td>
+                    <td><div class="value-border">@Model.GasConcentration.ToString("f2")</div></td>
+                    <td>%</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.WindFlowRate)</td>
+                    <td><div class="value-border">@Model.WindFlowRate.ToString("f2")</div></td>
+                    <td>m³/h</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.TotalPressure)</td>
+                    <td><div class="value-border">@Model.TotalPressure.ToString("f2")</div></td>
+                    <td>kPa</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+</div>

@@ -1,0 +1,34 @@
+﻿@model WebApplication2.Models.MainFan.Motor
+
+<div>
+    <span style="text-shadow: 0px 0 10px white">@Model.Name</span>
+    <div class="fan-border">
+
+        <div class="fan-border son-border">
+            <table class="fan-container">
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.StatorTemperature)</td>
+                    <td><div class="value-border">@Model.StatorTemperature.ToString("f2")</div></td>
+                    <td>℃</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.BearingTemperature)</td>
+                    <td><div class="value-border">@Model.BearingTemperature.ToString("f2")</div></td>
+                    <td>℃</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.VerticalVibration)</td>
+                    <td><div class="value-border">@Model.VerticalVibration.ToString("f2")</div></td>
+                    <td>um</td>
+                </tr>
+                <tr>
+                    <td>@Html.LabelFor(Model => Model.HorizontalVibration)</td>
+                    <td><div class="value-border">@Model.HorizontalVibration.ToString("f2")</div></td>
+                    <td>um</td>
+                </tr>
+            </table>
+            
+        </div>
+    </div>
+
+</div>
