@@ -11,6 +11,13 @@ namespace AnJian.Controllers
         // GET: DataCenter
         public ActionResult Index()
         {
+           
+            return View();
+        }
+
+        public ActionResult Index1()
+        {
+
             return View();
         }
     }
