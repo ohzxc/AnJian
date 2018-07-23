@@ -1,4 +1,5 @@
-﻿using System;
+﻿using AnJian.Models.DataCenter;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -14,17 +15,7 @@ namespace AnJian.Controllers
            
             return View();
         }
-
-        public JsonResult GetRecord(List<string> states, DateTime? startTime, DateTime? endTime)
-        {
-            var data = GetRecordData(states, startTime, endTime);
-            return Json(data, JsonRequestBehavior.AllowGet);
-        }
-
-        private object GetRecordData(List<string> states, DateTime? startTime, DateTime? endTime)
-        {
-            throw new NotImplementedException();
-        }
+        
 
 
         /// <summary>
@@ -34,6 +25,31 @@ namespace AnJian.Controllers
         public ActionResult DataExchangeSetting()
         {
             return View();
+        }
+        
+        public JsonResult GetRecord(List<string> states, DateTime? startTime, DateTime? endTime)
+        {
+            var data = GetRecordData(states, startTime, endTime);
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        private List<RecordInfo> GetRecordData(List<string> states, DateTime? startTime, DateTime? endTime)
+        {
+            var infos = new List<RecordInfo>();
+            for (int i = 0; i < 10; i++)
+            {
+                infos.Add(new RecordInfo
+                {
+                    ID = i.ToString(),
+                    State = i%2==0?RecordState.Handled:RecordState.Unhandle,
+                    Origin = "sd",
+                    Summary = "sdsd",
+                    Category = "dsd",
+                    Time=DateTime.Now.ToString("yyyy-MM-dd HH:mm:ss")
+                });
+            }
+
+            return infos;
         }
 
     }

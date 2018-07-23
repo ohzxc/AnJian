@@ -12,6 +12,7 @@ namespace AnJian.Models.DataCenter
         public string Summary { get; set; }
         public string Origin { get; set; }
         public RecordState State { get; set; }
+        public string Time { get; set; }
 
 
     }
