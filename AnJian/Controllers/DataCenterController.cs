@@ -11,7 +11,19 @@ namespace AnJian.Controllers
         // GET: DataCenter
         public ActionResult Index()
         {
+           
             return View();
+        }
+
+        public JsonResult GetRecord(List<string> states, DateTime? startDate, DateTime? endDate)
+        {
+            var data = GetRecordData(states,startDate,endDate);
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
+
+        private object GetRecordData(List<string> states, DateTime? startDate, DateTime? endDate)
+        {
+            throw new NotImplementedException();
         }
 
 
