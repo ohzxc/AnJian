@@ -15,10 +15,15 @@ namespace AnJian.Controllers
             return View();
         }
 
-        public ActionResult Index1()
+        public JsonResult GetRecord(List<string> states, DateTime? startDate, DateTime? endDate)
         {
+            var data = GetRecordData(states,startDate,endDate);
+            return Json(data, JsonRequestBehavior.AllowGet);
+        }
 
-            return View();
+        private object GetRecordData(List<string> states, DateTime? startDate, DateTime? endDate)
+        {
+            throw new NotImplementedException();
         }
 
 
