@@ -12,10 +12,15 @@ namespace AnJian.Controllers
         // GET: DataCenter
         public ActionResult Index()
         {
-           
+
             return View();
         }
-        
+        public ActionResult RecordDetail(int id)
+        {
+            ViewBag.id = id;
+            return View();
+        }
+
 
 
         /// <summary>

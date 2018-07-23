@@ -36,8 +36,9 @@
             { field: 'Category', title: '类别'  },
             { field: 'Summary', title: '概要'  },
             { field: 'Origin', title: '来源' },
-            { field: 'Time', title: '接收时间'},
-            { field: 'State', title: '状态',   align: 'right', formatter: StateFormatter },
+            { field: 'Time', title: '接收时间' },
+            { field: 'ID', title: '操作', formatter:ButtonFormatter },
+            { field: 'State', title: '状态', formatter: StateFormatter },
 
 
         ]]
@@ -55,9 +56,10 @@
         return result;
     }
 
-    function TimeFormatter(value, row, index) {
-         
-        return new Date(value);
+    function ButtonFormatter(value, row, index) {
+        var url = "\RecordDetail?id=" + value;
+        return "<a href=" + url+">查看明细</a>";
+
     }
 
 </script>
