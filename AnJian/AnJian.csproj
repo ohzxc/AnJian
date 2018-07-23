@@ -746,6 +746,7 @@
     <Content Include="Views\WaterPump\ControlCabinetRunTime.cshtml" />
     <Content Include="Views\WaterPump\Index.cshtml" />
     <Content Include="Views\DataCenter\Index.cshtml" />
+    <Content Include="Views\DataCenter\DataExchangeSetting.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
